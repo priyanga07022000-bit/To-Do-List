@@ -1,0 +1,143 @@
+*{
+    /* Reset default spacing and set a consistent box model */
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    /* Default font stack for the app */
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    /* Page background and center the app vertically/horizontally */
+    background-color:rgb(155, 155, 197);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /* Ensure the container can be centered even on short pages */
+    min-height:100vh;
+}
+
+.container{
+    /* white card that holds the todo UI */
+    width:420px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+h1{
+    /* App title styling */
+    text-align:center;
+    margin-bottom:20px;
+    font-style: italic;
+    text-decoration: underline;
+    color:#0c3d72
+}
+
+.input-box{
+    /* containing the text input and Add button */
+    display:flex;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+input{
+    /* Make the input grow to fill available space */
+    flex:1;
+    padding:10px;
+    font-size:16px;
+}
+
+#addBtn{
+    /*  Add button styling */
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+#addBtn:hover{
+    /* Slightly darker on hover for affordance */
+    background:#0056b3;
+}
+
+.filters{
+    /* Filter buttons row (All / Pending / Completed) */
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+}
+
+.filters button{
+    /* Individual filter button appearance */
+    padding:8px 15px;
+    border:none;
+    background:#ddd;
+    cursor:pointer;
+}
+
+.filters button:hover{
+    /* Hover state for filter buttons */
+    background:#bbb;
+}
+
+#counter{
+    /* Small summary showing completed/total */
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+#emptyMessage{
+    /* Shown when there are no tasks to display */
+    text-align:center;
+    color:gray;
+    margin:20px 0;
+}
+
+ul{
+    /* Remove default bullets from the task list */
+    list-style:none;
+}
+
+li{
+    /* Each task row: left (checkbox + text) and right (delete button) */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.task{
+    /* Container for checkbox and task text */
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.task span{
+    /* Make task text clickable to toggle completion */
+    cursor:pointer;
+}
+
+.completed{
+    /* Visual style for completed tasks */
+    text-decoration:line-through;
+    color:gray;
+}
+
+.delete-btn{
+    /* Red delete button on the right side of a task */
+    background:red;
+    color:white;
+    border:none;
+    padding:6px 12px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.delete-btn:hover{
+    /* Darker red on hover for clarity */
+    background:darkred;
+}
